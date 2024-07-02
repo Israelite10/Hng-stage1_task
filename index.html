@@ -1,0 +1,145 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stage 1</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <nav id="navbar" data-testid="Hng">
+      <div class="header-link">
+        <a href="https://hng.tech/internship" data-testid="HngLink"
+          >HNG.INTERSHIP</a
+        >
+      </div>
+
+      <ul class="list">
+        <li><a href="#hero3" data-testid="Homelink">Home</a></li>
+      </ul>
+    </nav>
+
+    <section id="hero1">
+      <div class="full-name" data-testid="full-name">
+        <h4>NAME: BELLO ISRAEL OPEYEMI</h4>
+      </div>
+
+      <div class="display-name" data-testid="slackDisplayName">
+        <p>SLACK-NAME: Israel</p>
+      </div>
+
+      <div id="currentTimeUTC" data-testid="currentTimeUTC"></div>
+
+      <div id="currentDay" data-testid="currentDay"></div>
+
+      <div class="display-email" data-testid="slackEmail">
+        <p>SLACK-EMAIL: belloisrael1999@gmail.com</p>
+      </div>
+    </section>
+    <section id="hero2">
+      <h1 class="center">Introduction</h1>
+      <div class="container">
+        <div class="intro-text" data-testid="text">
+          <p>
+            I'm Front-end developer focused on crafting clean & user-friendly
+            experience, I am passionate about building excellent software that
+            improves the lives the my community and those around me
+          </p>
+        </div>
+        <div class="image">
+          <img src="/img/ope1.jpg" data-testid="img" alt="" />
+        </div>
+      </div>
+    </section>
+    <section id="hero3">
+      <div class="plan" data-testid="plan">
+        <h1>My Two-Years Tech Plan</h1>
+        <h2>Year 1: Diving into Backend</h2>
+        <ul>
+          <li>
+            Learn a Programming Language.Python, JavaScript (Node.js), Java,
+            Ruby, PHP, etc
+          </li>
+          <li>
+            Understand HTTP(GET, POST, PUT, DELETE), status codes (200, 404,
+            500), etc. and APIs:
+          </li>
+          <li>
+            Learn about database (e.g., MySQL, PostgreSQL) and NoSQL databases
+            (e.g., MongoDB, Redis).
+          </li>
+          <li>learn Server-Side Frameworks and Tools</li>
+          <li>
+            Learn about authentication mechanisms (e.g., OAuth, JWT) and
+            authorization (roles, permissions)
+          </li>
+          <li>
+            Learn how to write and execute unit tests for your backend code,
+            Master debugging techniques to identify and fix issues in your code.
+          </li>
+          <li>
+            Understand how to deploy your backend applications to servers or
+            cloud platforms (e.g., AWS, Azure, Heroku).
+          </li>
+        </ul>
+      </div>
+
+      <div class="plan" data-testid="plan">
+        <h2>Year 2: Building Projects</h2>
+        <ul>
+          <li>Contribute to larger project and start Freelancing</li>
+          <li>Planing to build-up a dispach app for my brand</li>
+          <li>Planing to build-up a start up company E-commerce website</li>
+          <li>
+            Contribute to my community by teaching them the basics of tech
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer id="footer">
+      <p class="hidden">&copy; 2024 Israelbello</p>
+      <div class="link">
+        <span>
+          <a href="https://hng.tech/learn" data-testid="hngLink"
+            >Visit HNG Learn</a
+          ></span
+        >
+        <span class="spacelink">
+          <a href="https://keyword.dog" data-testid="keywordLink"
+            >Visit Keyword Dog</a
+          ></span
+        >
+        <span>
+          <a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink"
+            >Visit Scrape Any Web</a
+          >
+        </span>
+      </div>
+    </footer>
+
+    <script>
+      function updateTime() {
+        const currentTimeUTC = document.getElementById("currentTimeUTC");
+        const now = new Date();
+        const hours = String(now.getUTCHours()).padStart(2, "0");
+        const minutes = String(now.getUTCMinutes()).padStart(2, "0");
+        const seconds = String(now.getUTCSeconds()).padStart(2, "0");
+        currentTimeUTC.textContent =
+          `TIME:` + ` ` + `${hours}:${minutes}:${seconds}`;
+      }
+
+      setInterval(updateTime, 1000);
+
+      updateTime();
+
+      let currentDay = document.getElementById("currentDay");
+      let today = new Date();
+      let month = today.getMonth();
+      +1;
+      let year = today.getFullYear();
+      let date = today.getDate();
+
+      let current_date = `DATE:` + ` ` + `${date}/${month}/${year}`;
+      currentDay.innerText = current_date;
+    </script>
+  </body>
+</html>
